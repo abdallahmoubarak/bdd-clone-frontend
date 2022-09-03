@@ -14,7 +14,7 @@ img {
 
 /* Nav Bar*/
 .navigation {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,6 +22,8 @@ img {
   gap: 2rem;
   padding: 1rem 8vw;
   position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .navItems {
@@ -31,10 +33,15 @@ img {
 }
 .navItm {
   cursor: pointer;
-  padding: 0.2rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   font-size: 0.9rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
 }
 .navItm:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -87,7 +94,7 @@ li {
 
 /*  Hero  */
 .hero {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
 }
 .heroContant {
@@ -96,6 +103,7 @@ li {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   padding: 1rem 8vw;
 }
 .heroContant h1 {
@@ -111,7 +119,6 @@ li {
   z-index: -2;
   width: 100%;
   min-height: 100vh;
-  min-height: inherit;
 }
 .heroImg:before {
   content: "";
@@ -121,11 +128,135 @@ li {
   bottom: 0;
   left: 0;
   background-image: linear-gradient(to bottom right, #1d1800, #130f00);
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: -1;
 }
 
 .heroHead {
   margin: auto;
   color: white;
+}
+.dots {
+  content: "";
+  display: flex;
+
+  gap: 0.6rem;
+}
+.dots div {
+  height: 0.6rem;
+  width: 0.6rem;
+  background: #fff;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.dots div:first-child {
+  background: #0275d8;
+}
+.arrow {
+  height: 4rem;
+}
+
+/* foundSection */
+
+.foundSection {
+  background-color: #eee;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.cardContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.foundCard {
+  background-color: #fff;
+  border-radius: 1.6rem;
+  -webkit-border-radius: 1.6rem;
+  -moz-border-radius: 1.6rem;
+  -ms-border-radius: 1.6rem;
+  -o-border-radius: 1.6rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 16rem;
+  box-shadow: 0px 4px 15px 0px rgb(0 0 0 / 6%);
+}
+.card1:hover,
+.card2:hover {
+  background-color: rgb(201, 217, 231);
+}
+.card3:hover {
+  background-color: rgb(165, 207, 196);
+}
+.card4:hover {
+  background-color: rgb(237, 240, 202);
+}
+.card5:hover {
+  background-color: rgb(240, 202, 202);
+}
+.foundCardHead {
+  font-weight: bold;
+}
+.foundCardBody {
+  font-size: 1.1rem;
+  line-height: 1.6em;
+}
+
+/* video section */
+.videoSection {
+  min-height: 30rem;
+  position: relative;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.videoImg {
+  background-image: url("/src/imgs/parallax-4.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+}
+
+.videoImg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #1d1800, #130f00);
+  opacity: 0.5;
+  z-index: -1;
+}
+.videoHead {
+  text-align: center;
+  color: #fff;
+}
+.videoImgContainer {
+  width: 70vw;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* join section */
+
+.joinSection {
+  position: relative;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.joinHead {
+  text-align: center;
+  color: black;
 }
