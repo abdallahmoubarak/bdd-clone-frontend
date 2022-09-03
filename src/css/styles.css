@@ -4,8 +4,128 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
 }
 
 img {
   height: 100%;
+}
+
+/* Nav Bar*/
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 2rem;
+  padding: 1rem 8vw;
+  position: fixed;
+}
+
+.navItems {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.navItm {
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.navItm:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.logo {
+  min-height: 100px;
+  height: 100px;
+}
+li {
+  list-style: none;
+}
+.btn {
+  padding: 0.8rem 1.4rem;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bluebtn {
+  color: white;
+  background-color: #0275d8;
+  border-radius: 20rem;
+  -webkit-border-radius: 20rem;
+  -moz-border-radius: 20rem;
+  -ms-border-radius: 20rem;
+  -o-border-radius: 20rem;
+}
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transform: rotate(90deg);
+  font-weight: 300;
+}
+
+@media screen and (max-width: 991px) {
+  .navItems {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .navigation {
+    background-color: black;
+  }
+  .logo {
+    min-height: 4rem;
+    height: 4rem;
+  }
+}
+
+/*  Hero  */
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+}
+.heroContant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem 8vw;
+}
+.heroContant h1 {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.heroImg {
+  background-image: url("/src/imgs/slide5.jpg");
+  background-size: cover;
+  background-position-x: center;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  min-height: 100vh;
+  min-height: inherit;
+}
+.heroImg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #1d1800, #130f00);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.heroHead {
+  margin: auto;
+  color: white;
 }
