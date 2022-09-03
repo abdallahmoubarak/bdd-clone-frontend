@@ -391,3 +391,79 @@ li {
   justify-content: center;
   align-items: center;
 }
+
+/* academy section */
+
+.academySection {
+  min-height: 20rem;
+  position: relative;
+  padding: 2rem;
+  color: white;
+}
+.academyImg {
+  background-image: url("/src/imgs/parallax-7.jpg");
+  background-size: cover;
+  background-position-x: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+}
+
+.academyImg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #000000, #000000);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.acaCardContainer {
+  padding: 1rem 7vw;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.acaCard1 {
+  flex: 1 1 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.acaCard {
+  flex: 1 1 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.acaCardImg1 {
+  width: 8rem;
+}
+.acaCardImg {
+  width: 5rem;
+  height: 5rem;
+}
+.acaTxt1 {
+  padding-bottom: 0.2rem;
+}
+.acaTxt {
+  text-align: center;
+  font-weight: bold;
+}
+.crdlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 1 12rem;
+}
